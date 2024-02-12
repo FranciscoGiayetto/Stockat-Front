@@ -1,5 +1,6 @@
 import {Grid} from "@mui/material"
 import { Roboto } from 'next/font/google'
+import "./page.css"
 
 const roboto = Roboto({
   weight: '400',
@@ -9,9 +10,10 @@ const roboto = Roboto({
 export default function Home() {
   return (
     <Grid container spacing={2} className={roboto.className}>
-      <Grid item xs={8}>
-        <h1>Starting</h1>
+      <Grid item xs={12}>
+        <h1>Optimizá tu negocio con Stockat</h1>
       </Grid>
     </Grid>
   );
 }
+
