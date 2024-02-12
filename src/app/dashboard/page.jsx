@@ -11,6 +11,7 @@ export default function Dashboard() {
     <Grid container spacing={2} className={roboto.className}>
       <Grid item xs={8}>
         <h1>Dashboard</h1>
+        <h2>Aca salo labura</h2>
       </Grid>
     </Grid>
   );
