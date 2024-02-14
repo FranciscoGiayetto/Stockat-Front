@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.fondo{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f33713;
+    background: linear-gradient(90deg,#f33713 0%, #f7a619 80%);
+    background: -webkit-linear-gradient(90deg,#f33713 0%, #f7a619 80%);
+    background: -moz-linear-gradient(90deg,#f33713 0%, #f7a619 80%);
+}
+
+.titulo{
+    color: white;
+}
+
+.usuario, .contraseña{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 400px;
+    margin: 10px 0;
+}
+
+.usuario img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+.boton{
+    background-color: #832029;
+    width: 400px;
+    height: 60px;
+    margin: 10px 0;
+}
+
+.boton:hover{
+    background-color: black;
+}
