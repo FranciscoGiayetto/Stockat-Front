@@ -14,29 +14,79 @@
     background: linear-gradient(90deg,#f33713 0%, #f7a619 80%);
     background: -webkit-linear-gradient(90deg,#f33713 0%, #f7a619 80%);
     background: -moz-linear-gradient(90deg,#f33713 0%, #f7a619 80%);
+    gap: 20px;
+}
+
+.logo{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
 }
 
 .titulo{
     color: white;
 }
 
+
 .usuario, .contraseña{
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 400px;
-    margin: 10px 0;
+    width: auto;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.usuario img{
-    width: 30px;
-    height: 30px;
-    object-fit: cover;
+.icono{
+    width: 55px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.usuario hr, .contraseña hr{
+    height: 95%;
+    color: white;
+    border: 1px solid white;
+}
+
+.text-field{
+    width: 345px;
+    height: 55px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+/* Estilo para quitar el borde negro */
+.text-field .MuiOutlinedInput-root {
+    border: none;
+  }
+  
+/* Estilo para agregar un borde personalizado si es necesario */
+.text-field .MuiOutlinedInput-notchedOutline {
+    border: none;
+}
+
+/* Estilo cuando el TextField está enfocado */
+.text-field .Mui-focused {
+    color: black; 
+    font-style: italic;
+    font-weight: bold;
+  }
+
 
 .boton{
     background-color: #832029;
     width: 400px;
-    height: 60px;
-    margin: 10px 0;
+    height: 55px;
+    border-radius: 10px;
 }
 
 .boton:hover{
