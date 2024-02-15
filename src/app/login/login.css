@@ -14,6 +14,15 @@
     background: linear-gradient(90deg,#f33713 0%, #f7a619 80%);
     background: -webkit-linear-gradient(90deg,#f33713 0%, #f7a619 80%);
     background: -moz-linear-gradient(90deg,#f33713 0%, #f7a619 80%);
+}
+
+.form{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
@@ -54,7 +63,7 @@
     border: 1px solid white;
 }
 
-.text-field{
+.textfield{
     width: 345px;
     height: 55px;
     border: none;
@@ -65,17 +74,17 @@
 }
 
 /* Estilo para quitar el borde negro */
-.text-field .MuiOutlinedInput-root {
+.textfield .MuiOutlinedInput-root {
     border: none;
   }
   
 /* Estilo para agregar un borde personalizado si es necesario */
-.text-field .MuiOutlinedInput-notchedOutline {
+.textfield .MuiOutlinedInput-notchedOutline {
     border: none;
 }
 
 /* Estilo cuando el TextField está enfocado */
-.text-field .Mui-focused {
+.textfield .Mui-focused {
     color: black; 
     font-style: italic;
     font-weight: bold;
