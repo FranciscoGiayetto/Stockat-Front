@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .fondo{
@@ -89,6 +89,44 @@
     font-style: italic;
     font-weight: bold;
   }
+
+.opciones{
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.opciones h3{
+    font-size: 1rem;
+}
+
+.check{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.check h3{
+    color: white;
+}
+
+.olvide{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.olvide h3{
+    text-align: right;
+    color: #832029;
+}
 
 
 .boton{

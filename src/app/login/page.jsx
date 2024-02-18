@@ -23,9 +23,7 @@ import Checkbox from '@mui/material/Checkbox';
 import Image from 'next/image';
 import Logo from './logo.png';
 
-
-
-
+// CSS
 import './login.css'
 
 function page() {  
@@ -115,8 +113,10 @@ function page() {
                 />
                 <h3>Recordame</h3>
               </div>
-              
-              <h3>Olvidé mi contraseña</h3>
+
+              <div className="olvide">
+                <h3>Olvidé mi contraseña</h3>
+              </div>
             </div>
 
             <Button className='boton' variant="contained" type='submit'>INICIAR SESIÓN</Button>
