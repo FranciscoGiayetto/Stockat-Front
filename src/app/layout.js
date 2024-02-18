@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Stockat',
-  description: 'Tu gestionador de confianza',
+  title: 'Stockat | Gestioná con confiaza',
+  description: 'Controlá tu negocio más fácil',
 }
 
 export default function RootLayout({ children }) {

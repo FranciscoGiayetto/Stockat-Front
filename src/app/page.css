@@ -2,11 +2,30 @@
     display: flex;
     width: 100%;
     height: 100vh;
-    background-color: rgb(255, 244, 244);
     flex-direction: column;
     justify-content: center;
-    align-items: left;
+    align-items: right;    
+    z-index: 2;
 }
+
+
+.image-container{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+    z-index: -1;
+    right: 0; 
+    top: 0; 
+}
+.image-container {
+    --mask:
+      radial-gradient(69.87px at 98.70px 50%,#000 99%,#0000 101%) 0 calc(50% - 94px)/100% 188px,
+      radial-gradient(69.87px at -51.7px 50%,#0000 99%,#000 101%) 47px 50%/100% 188px repeat-y;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+  }
 
 .main h1{
     margin-left: 50px;
@@ -22,5 +41,10 @@
 .sec{
     display: flex;
     text-align: center;
+}
 
+.btn-main{
+    width: 10%;
+    font-weight: bold;
+    margin-left: 15%;
 }
