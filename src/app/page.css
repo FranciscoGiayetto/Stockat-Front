@@ -47,4 +47,49 @@
     width: 10%;
     font-weight: bold;
     margin-left: 15%;
+    padding: 20px;
+    background-color: orange;
+}
+
+.btn-main:hover{
+    background-color: rgb(167, 108, 0);
+}
+
+
+
+.inf-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: right;
+    width: 96%;
+
+}
+
+.inf-right-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+    width: 30%;
+    margin-left: 25px;
+
+}
+
+.inf-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: right;
+    width: 50%;
+
+}
+
+.inf-left-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+    width: 60%;
+    margin-left: 25px;
 }

@@ -1,5 +1,6 @@
 'use client'
 
+import React, {Typography, useState} from "react"
 import {Grid, Box, Button, Container} from "@mui/material"
 import { Roboto } from 'next/font/google'
 import Navbar from "@/components/navbar/Navbar"
@@ -9,6 +10,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 
 import PriceCard from "@/components/priceCard"
+
+//STEPPER
+import Stepper from '@mui/material/Stepper';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
+import StepContent from '@mui/material/StepContent';
 
 //STYLES
 import 'swiper/css';
@@ -37,10 +44,7 @@ const classes = {
     fontFamily: "Roboto"
   }
 };
-
-
 export default function Home() {
-
   return (
     <>
       <Navbar />
@@ -58,8 +62,38 @@ export default function Home() {
           >COMENCEMOS</Button>
         </Grid>
         <Box sx={{ width: '100%', flexGrow:1, marginTop:"180px" }}>
-          <h1 style={{textAlign:"center"}}>¿QUÉ TENEMOS PARA VOS?</h1>  
-          <img src="https://th.bing.com/th/id/OIG1.ZysMkac4PtuYwbzy.MEF?pid=ImgGn" alt="" />
+          <h1 style={{textAlign:"center", fontSize:"50px", margin:"150px"}}>¿QUÉ TENEMOS PARA VOS?</h1>  
+          <div className="inf-right">
+          <img src="https://th.bing.com/th/id/OIG1.ZysMkac4PtuYwbzy.MEF?pid=ImgGn" alt="" style={{width:"200px", height:"200px"}} />
+            <div className="inf-right-txt">
+              <h2>Analisis de tu negocio</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>
+
+          <div className="inf-left">
+            <img src="https://th.bing.com/th/id/OIG1.ZysMkac4PtuYwbzy.MEF?pid=ImgGn" alt="" style={{width:"200px", height:"200px"}} />
+            <div className="inf-left-txt">
+              <h2 >Control de distribuidores</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>
+
+          <div className="inf-right">
+          <img src="https://th.bing.com/th/id/OIG1.ZysMkac4PtuYwbzy.MEF?pid=ImgGn" alt="" style={{width:"200px", height:"200px"}} />
+            <div className="inf-right-txt">
+              <h2>Gráficos en tiempo real</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>
+
+          <div className="inf-left">
+            <img src="https://th.bing.com/th/id/OIG1.ZysMkac4PtuYwbzy.MEF?pid=ImgGn" alt="" style={{width:"200px", height:"200px"}} />
+            <div className="inf-left-txt">
+              <h2 >Emmaaaa</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>
 
         </Box>
         <Box sx={{ width: '100%', flexGrow:1 }}>
@@ -190,7 +224,6 @@ export default function Home() {
         </Box>
         <Box sx={{ width: '100%', flexGrow:1, textAlign:"center" }}>
           <h1 style={{textAlign:"center"}}>Empezar es muy fácil</h1>  
-          <p>* Steper MUI *</p>
         </Box>
       </Grid>
     </>
