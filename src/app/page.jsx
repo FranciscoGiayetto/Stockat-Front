@@ -202,7 +202,7 @@ export default function Home() {
 
             <SwiperSlide style={{display:"flex", justifyContent:"center", alignItems:"center"}}><PriceCard
             title={"Básico"}
-            price={20000}
+            price={20001}
             features={"X"}
             operations={1}
             deposits={3}
