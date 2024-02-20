@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.fondo{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f33713;
+    background: linear-gradient(90deg,#f33713 0%, #f7a619 80%);
+    background: -webkit-linear-gradient(90deg,#f33713 0%, #f7a619 80%);
+    background: -moz-linear-gradient(90deg,#f33713 0%, #f7a619 80%);
+}
+
+.form{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.titulo{
+    color: white;
+}
+
+
+.usuario, .contraseña{
+    width: auto;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono{
+    width: 55px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.usuario hr, .contraseña hr{
+    height: 95%;
+    color: white;
+    border: 1px solid white;
+}
+
+.textfield{
+    width: 345px;
+    height: 55px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+/* Estilo para quitar el borde negro */
+.textfield .MuiOutlinedInput-root {
+    border: none;
+  }
+  
+/* Estilo para agregar un borde personalizado si es necesario */
+.textfield .MuiOutlinedInput-notchedOutline {
+    border: none;
+}
+
+/* Estilo cuando el TextField está enfocado */
+.textfield .Mui-focused {
+    color: black; 
+    font-style: italic;
+    font-weight: bold;
+  }
+
+.opciones{
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.opciones h3{
+    font-size: 1rem;
+}
+
+.check{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.check h3{
+    color: white;
+}
+
+.olvide{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.olvide h3{
+    text-align: right;
+    color: #832029;
+}
+
+
+.boton{
+    background-color: #832029;
+    width: 400px;
+    height: 55px;
+    border-radius: 10px;
+}
+
+.boton:hover{
+    background-color: black;
+}
