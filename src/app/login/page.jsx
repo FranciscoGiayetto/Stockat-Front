@@ -21,7 +21,7 @@ import Checkbox from '@mui/material/Checkbox';
 
 
 import Image from 'next/image';
-import Logo from './logo.png';
+import Logo from './logoBlanco.png';
 
 // CSS
 import './login.css'
