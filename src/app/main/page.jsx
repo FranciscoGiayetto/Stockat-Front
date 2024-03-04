@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import './main.css'
 import Sidebarrr from "@/components/sidebar/Sidebarrr"

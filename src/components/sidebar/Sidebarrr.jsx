@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 // SIDEBAR
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
@@ -15,8 +15,26 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 library.add(faHouse, faCartShopping, faBox, faArrowRightArrowLeft, faDownload, faRightFromBracket, faBars, faChevronUp);
 
 function Sidebarrr() {
+  // const [width, setWidth] = useState(window.innerWidth);
+  const [collapsed, setCollapsed] = useState(true);
 
-  const [collapsed, setCollapsed] = React.useState(false);
+  // function getSize() {
+  //   setWidth(window.innerWidth);
+  // }
+
+  // useEffect(() => {
+  //   window.addEventListener('resize', getSize);
+  //   if (width < 625) {
+  //     setCollapsed(true);
+  //   } else {
+  //     setCollapsed(false);
+  //   }
+
+  //   return () => {
+  //     window.removeEventListener('resize', getSize);
+  //   };
+  // }, [width]);
+
 
   return (
 
@@ -56,7 +74,7 @@ function Sidebarrr() {
             <div className="derecha">
               <h1>EL KIOSCO DE MARIO</h1>
               <hr className='derecha-hr' />
-              <a href=""><FontAwesomeIcon icon="fa-solid fa-right-from-bracket" style={{color: "#000000",}} size='xl' /></a>
+              <a href="/login"><FontAwesomeIcon icon="fa-solid fa-right-from-bracket" style={{color: "#000000",}} size='xl' /></a>
             </div>
           </div>
           <hr className='hr-final'/>
