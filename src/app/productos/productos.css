@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    background-color: #f5f6f7;
+    width: 100%;
+    height: 100vh;
+}
+
+.productos, .productos2{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+    align-items: center;
+}
+
+.producto, .producto2{
+    background-color: white;
+    width: 90%;
+    height: 90px;
+    box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.new-bar{
+    background-color: white;
+    width: 50%;
+    margin-top: -21px;
+    box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* TEXTO ------------------------------------------------------------------------------------------- */
+.texto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+    justify-content: space-around;
+}
+
+.texto h3{
+    color: black;
+}
+/* -------------------------------------------------------------------------------------------------- */
+
+/* IMAGEN ------------------------------------------------------------------------------------------- */
+.imagen{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 12%;
+    position: relative;
+    
+}
+.degrade {
+    position: absolute;
+    height: 90px;
+    width: 12%;
+    z-index: 10;
+    background: rgba(255,255,255,0);
+    background: linear-gradient(90deg,rgba(255,255,255,0) 0%, rgba(255,255,255,0) 20%, #ffffff 85%, #ffffff 100%);
+    background: -webkit-linear-gradient(90deg,rgba(255,255,255,0) 0%, rgba(255,255,255,0) 20%, #ffffff 85%, #ffffff 100%);
+    background: -moz-linear-gradient(90deg,rgba(255,255,255,0) 0%, rgba(255,255,255,0) 20%, #ffffff 85%, #ffffff 100%);
+  }
+.imagen img{
+    width: 205px;
+    height: 90px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+/* -------------------------------------------------------------------------------------------------- */
+
+/* BOTONES ------------------------------------------------------------------------------------------- */
+.botones{
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    justify-content: space-around;
+    align-items: center;
+}
+.botones button{
+    width: 50px;
+    height: 50px;
+    box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    border: none;
+}
+
+.agregar{
+    background-color: blue;
+    border-radius: 100%;
+}
+
+.editar{
+    background-color: #F56F16;
+    border-radius: 16px;
+}
+
+.eliminar{
+    background-color: red;
+    border-radius: 16px;
+}
+/* -------------------------------------------------------------------------------------------------- */
+
+/* OTROS ------------------------------------------------------------------------------------------- */
+.producto hr, .producto2 hr{
+    height: 75%;
+    border: 1px solid black;
+    margin: 0 10px;
+}
+/* -------------------------------------------------------------------------------------------------- */

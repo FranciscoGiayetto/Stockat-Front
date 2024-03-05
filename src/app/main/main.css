@@ -29,10 +29,9 @@
     -moz-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
     border-radius: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .resumen{
