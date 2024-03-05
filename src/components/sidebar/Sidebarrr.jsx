@@ -15,9 +15,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 library.add(faHouse, faCartShopping, faBox, faArrowRightArrowLeft, faDownload, faRightFromBracket, faBars, faChevronUp);
 
 function Sidebarrr() {
-  // const [width, setWidth] = useState(window.innerWidth);
   const [collapsed, setCollapsed] = useState(true);
 
+  // const [width, setWidth] = useState(window.innerWidth);
   // function getSize() {
   //   setWidth(window.innerWidth);
   // }
@@ -53,9 +53,12 @@ function Sidebarrr() {
           </div>
           <div className="menues">
             <Menu color='white'>
+              <hr />
               <a href="/main"><MenuItem style={{ fontSize: '1.3rem', color: 'white' }} icon={<FontAwesomeIcon icon="house" style={{ color: "#ffffff" }} size="xl" />}> Inicio </MenuItem></a>
               <MenuItem style={{ fontSize: '1.3rem', color: 'white' }} icon={<FontAwesomeIcon icon="cart-shopping" style={{ color: "#ffffff" }} size="xl" />}> Ventas </MenuItem>
-              <MenuItem style={{ fontSize: '1.3rem', color: 'white' }} suffix='⚠️' icon={<FontAwesomeIcon icon="box" style={{ color: "#ffffff" }} size="xl" />}> Productos </MenuItem>
+              <a href="/productos">
+                <MenuItem style={{ fontSize: '1.3rem', color: 'white' }} suffix='⚠️' icon={<FontAwesomeIcon icon="box" style={{ color: "#ffffff" }} size="xl" />}> Productos </MenuItem>
+              </a>
               <MenuItem style={{ fontSize: '1.3rem', color: 'white' }} icon={<FontAwesomeIcon icon="arrow-right-arrow-left" style={{ color: "#ffffff" }} size="xl" />}> Historial </MenuItem>
             </Menu>
             <Menu color='white'>
