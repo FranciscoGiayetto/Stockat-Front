@@ -9,7 +9,8 @@
     height: 100vh;
 }
 
-.productos, .productos2{
+/* BUSQUEDA ------------------------------------------------------------------------------------------- */
+.barra{
     padding-top: 100px;
     display: flex;
     flex-direction: column;
@@ -17,7 +18,67 @@
     align-items: center;
 }
 
-.producto, .producto2{
+.contenido-barra{
+    width: 90%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    border-radius: 20px;
+}
+
+.buscador{
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    padding-left: 20px;
+}
+
+.buscar{
+    height: 50%;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+.botones-arriba{
+    width: 15%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.botones-arriba button{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+    background-color: #F56F16;
+    border: none;
+    border-radius: 16px;
+    margin-right: 20px;
+}
+
+.botones-arriba button:hover{
+    transform: scale(1.1);
+}
+/* ----------------------------------------------------------------------------------------------------- */
+
+.productos{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+    align-items: center;
+}
+
+.producto{
     background-color: white;
     width: 90%;
     height: 90px;
@@ -32,28 +93,18 @@
     margin-bottom: 20px;
 }
 
-.new-bar{
-    background-color: white;
-    width: 50%;
-    margin-top: -21px;
-    box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
-    text-align: center;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
 /* TEXTO ------------------------------------------------------------------------------------------- */
 .texto{
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 60%;
-    justify-content: space-around;
+    justify-content: space-between;
+    text-align: left;
 }
 
 .texto h3{
+    font-size: 1rem;
     color: black;
 }
 /* -------------------------------------------------------------------------------------------------- */
@@ -65,8 +116,8 @@
     align-items: center;
     width: 12%;
     position: relative;
-    
 }
+
 .degrade {
     position: absolute;
     height: 90px;
@@ -78,7 +129,7 @@
     background: -moz-linear-gradient(90deg,rgba(255,255,255,0) 0%, rgba(255,255,255,0) 20%, #ffffff 85%, #ffffff 100%);
   }
 .imagen img{
-    width: 205px;
+    width: 100%;
     height: 90px;
     object-fit: cover;
     border-top-left-radius: 20px;
@@ -101,6 +152,12 @@
     -webkit-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
     border: none;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+}
+
+.botones button:hover{
+    transform: scale(1.1);
 }
 
 .agregar{
@@ -120,9 +177,34 @@
 /* -------------------------------------------------------------------------------------------------- */
 
 /* OTROS ------------------------------------------------------------------------------------------- */
-.producto hr, .producto2 hr{
+.producto hr{
     height: 75%;
     border: 1px solid black;
     margin: 0 10px;
+}
+/* -------------------------------------------------------------------------------------------------- */
+
+/* RESPONSIVE ---------------------------------------------------------------------------------------- */
+@media (max-width: 1000px){
+    .texto h3{
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 720px){
+    .botones{
+        display: none;
+    }
+
+    .texto{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 80%;
+        justify-content: space-around;
+    }
+
+    .texto h3{
+        font-size: 0.8rem;
+    }
 }
 /* -------------------------------------------------------------------------------------------------- */
