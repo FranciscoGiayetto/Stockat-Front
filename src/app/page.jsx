@@ -8,14 +8,13 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
+import VerticalLinearStepper from "@/components/Stepper"
+
 
 import PriceCard from "@/components/priceCard"
+import Footer from "@/components/footer/Footer"
 
-//STEPPER
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
-import StepLabel from '@mui/material/StepLabel';
-import StepContent from '@mui/material/StepContent';
+
 
 //STYLES
 import 'swiper/css';
@@ -90,7 +89,7 @@ export default function Home() {
           <div className="inf-left">
             <img src="https://th.bing.com/th/id/OIG1.ZysMkac4PtuYwbzy.MEF?pid=ImgGn" alt="" style={{width:"200px", height:"200px"}} />
             <div className="inf-left-txt">
-              <h2 >Emmaaaa</h2>
+              <h2 >Me quedé sin ideas</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
           </div>
@@ -222,10 +221,14 @@ export default function Home() {
           
           </Swiper>
         </Box>
-        <Box sx={{ width: '100%', flexGrow:1, textAlign:"center" }}>
-          <h1 style={{textAlign:"center"}}>Empezar es muy fácil</h1>  
+        <Box sx={{ width: '100%', flexGrow:1, textAlign:"center", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", height:"100vh"}}>
+          <h1 style={{textAlign:"center", marginBottom:"100px", fontSize:"60px"}}>Empezar es muy fácil</h1>  
+          <VerticalLinearStepper />
+
         </Box>
       </Grid>
+      
+      <Footer />
     </>
   );
 }
