@@ -18,6 +18,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { orange } from '@mui/material/colors';
 
+
 const drawerWidth = 240;
 const navItems = ['Home', 'Log In', 'Register'];
 
@@ -35,8 +36,8 @@ function Navbar(props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
         <IconButton >
-            <img src="https://cdn.discordapp.com/attachments/1202708685084823554/1206684142641881098/g1904.png?ex=65dce72e&is=65ca722e&hm=e4ae96571958254d15f1b668d88fce69120b27539f0a64a85963f47cc4bb4273&" alt="logo" srcset="" style={{width: "35px", height: "50px"}}/>
-            <h2>TOCKAT</h2>
+            <img src="https://i.ibb.co/cYnvKcx/logo-Blanco.png" alt="logo" srcset="" style={{width: "35px", height: "50px"}}/>
+            <h2 style={{fontWeight:"bold"}}>TOCKAT</h2>
         </IconButton>
       </Typography>
       <Divider />
@@ -57,7 +58,7 @@ function Navbar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ backgroundColor: orange[500] }}>
+      <AppBar component="nav" sx={{ backgroundColor: "#F56F16" }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -74,8 +75,7 @@ function Navbar(props) {
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
             <IconButton disableRipple={true}>
-              <img src="https://cdn.discordapp.com/attachments/1202708685084823554/1206684142641881098/g1904.png?ex=65dce72e&is=65ca722e&hm=e4ae96571958254d15f1b668d88fce69120b27539f0a64a85963f47cc4bb4273&" alt="logo" className='img-logo-nav' style={{width: "35px", height: "50px"}} />
-               
+              <img src="https://i.ibb.co/cYnvKcx/logo-Blanco.png" alt="logo" className='img-logo-nav' style={{width: "50px", height: "50px", marginRight:"-10px"}} />
             TOCKAT
             </IconButton>
           </Typography>
