@@ -19,12 +19,14 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Checkbox from '@mui/material/Checkbox';
 
-
 import Image from 'next/image';
 import Logo from './logoBlanco.png';
 
 // CSS
 import './login.css'
+
+import Footer from '@/components/footer/Footer';
+
 
 function page() {  
   // CONTRASEÑA
@@ -40,6 +42,7 @@ function page() {
   const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
   return (
+    <>
     <div className='fondo'>
       <Formik
         initialValues={{
@@ -120,10 +123,13 @@ function page() {
             </div>
 
             <Button className='boton' variant="contained" type='submit'>INICIAR SESIÓN</Button>
+            <Button sx={{color:"white"}} href='/home'>Volver a inicio</Button>
           </Form>
         )}
       </Formik>
     </div>
+    <Footer/>
+    </>
   )
 }
 
