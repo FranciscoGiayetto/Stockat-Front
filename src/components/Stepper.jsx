@@ -17,7 +17,7 @@ const theme = createTheme({
             color:"green"
         },
         root: {
-          color: 'brown',
+          color: 'orange',
         },
       },
     },
