@@ -91,6 +91,13 @@ function page() {
             </div>
           </div>
 
+          <div className="opciones">
+            <div className="opciones-contenido">
+              <button className='filtrar'>FILTRAR v</button>
+              <button className='agregar-categoria'>AGREGAR CATEGORÍA</button>
+            </div>
+          </div>
+
           <div className="productos">
             <div className="producto">
               <div className="degrade"></div>
