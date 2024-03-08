@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    background-color: #f5f6f7;
+    width: 100%;
+    height: 100vh;
+}
+
+/* BUSQUEDA ------------------------------------------------------------------------------------------- */
+.barra{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+    align-items: center;
+}
+
+.contenido-barra{
+    width: 90%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    border-radius: 20px;
+}
+
+.buscador{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    padding-left: 20px;
+}
+
+.buscar{
+    height: 50%;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+.botones-arriba{
+    width: 150px;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.botones-arriba button{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+    background-color: #F56F16;
+    border: none;
+    border-radius: 16px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.botones-arriba button:hover{
+    transform: scale(1.1);
+}
+/* ----------------------------------------------------------------------------------------------------- */
+
+/* OPCIONES -------------------------------------------------------------------------------------------- */
+.opciones{
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+    align-items: center;
+}
+
+.opciones-contenido{
+    width: 90%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filtrar, .agregar-categoria{
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    border-radius: 8px;
+    border: none;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+
+/* PRODUCTOS ------------------------------------------------------------------------------------------- */
+.productos{
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+    align-items: center;
+}
+
+.producto{
+    background-color: white;
+    width: 90%;
+    height: 90px;
+    box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* TEXTO ------------------------------------------------------------------------------------------- */
+.texto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 55%;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.texto h3{
+    font-size: 1rem;
+    color: black;
+}
+/* -------------------------------------------------------------------------------------------------- */
+
+/* IMAGEN ------------------------------------------------------------------------------------------- */
+.imagen{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 12%;
+    position: relative;
+}
+
+.degrade {
+    position: absolute;
+    height: 90px;
+    width: 12%;
+    z-index: 10;
+    background: rgba(255,255,255,0);
+    background: linear-gradient(90deg,rgba(255,255,255,0) 0%, rgba(255,255,255,0) 20%, #ffffff 85%, #ffffff 100%);
+    background: -webkit-linear-gradient(90deg,rgba(255,255,255,0) 0%, rgba(255,255,255,0) 20%, #ffffff 85%, #ffffff 100%);
+    background: -moz-linear-gradient(90deg,rgba(255,255,255,0) 0%, rgba(255,255,255,0) 20%, #ffffff 85%, #ffffff 100%);
+  }
+.imagen img{
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+/* -------------------------------------------------------------------------------------------------- */
+
+/* BOTONES ------------------------------------------------------------------------------------------- */
+.botones{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    justify-content: space-around;
+    align-items: center;
+}
+.botones button{
+    width: 50px;
+    height: 50px;
+    box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
+    border: none;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+}
+
+.botones button:hover{
+    transform: scale(1.1);
+}
+
+.agregar{
+    background-color: blue;
+    border-radius: 100%;
+}
+
+.editar{
+    background-color: #F56F16;
+    border-radius: 16px;
+}
+
+.eliminar{
+    background-color: red;
+    border-radius: 16px;
+}
+/* -------------------------------------------------------------------------------------------------- */
+
+/* OTROS ------------------------------------------------------------------------------------------- */
+.producto hr{
+    height: 75%;
+    border: 1px solid black;
+    margin: 0 10px;
+}
+/* -------------------------------------------------------------------------------------------------- */
+
+/* RESPONSIVE ---------------------------------------------------------------------------------------- */
+@media (max-width: 1000px){
+    .texto h3{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 900px){
+    .botones button{
+        width: 40px;
+        height: 40px;
+        font-size: 0.7rem;
+    }
+    .editar{
+        background-color: #F56F16;
+        border-radius: 12px;
+    }
+    .eliminar{
+        background-color: red;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 720px){
+    .botones{
+        display: none;
+    }
+
+    .texto{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 80%;
+        justify-content: space-around;
+    }
+
+    .texto h3{
+        font-size: 0.8rem;
+    }
+
+    .imagen{
+        display: none;
+    }
+
+    .degrade{
+        display: none;
+    }
+
+    .producto hr{
+        display: none;
+    }
+
+    .texto{
+        width: 100%;
+    }
+
+
+}
+/* -------------------------------------------------------------------------------------------------- */
