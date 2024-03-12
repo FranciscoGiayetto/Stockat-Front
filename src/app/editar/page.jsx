@@ -3,7 +3,7 @@
 import React from 'react'
 
 // STYLES
-import './agregar.css'
+import './editar.css'
 
 // SIDEBAR
 import Sidebarrr from '@/components/sidebar/Sidebarrr'
@@ -13,12 +13,13 @@ import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import InputAdornment from '@mui/material/InputAdornment';
 
 // FONT AWESOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBackward } from '@fortawesome/free-solid-svg-icons';
+import { faBackward, faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
-library.add(faBackward);
+library.add(faBackward, faDollarSign);
 
 
 function page() {
@@ -55,18 +56,31 @@ function page() {
                 <div className="cont-cont">
                     <div className="cabeza">
                         <button className='volver'><FontAwesomeIcon icon="fa-solid fa-backward" size="xl" style={{color: "#F56F16",}} /></button>
-                        <h1>AGREGAR PRODUCTO</h1>
+                        <h1>EDITAR PRODUCTO</h1>
                         <button className='guardar'>GUARDAR</button>
                     </div>
                     <div className="cuerpo">
-                        <div className="code"><TextField className='field' id="outlined-basic" label="CÓDIGO:" variant="outlined" /></div>
-                        <div className="name"><TextField className='field' id="outlined-basic" label="NOMBRE:" variant="outlined" /></div>
+                        <div className="code"><TextField className='field' id="outlined-basic" label="CÓDIGO:" variant="outlined" defaultValue="123456789" /></div>
+                        <div className="name"><TextField className='field' id="outlined-basic" label="NOMBRE:" variant="outlined" defaultValue="Caramelos de Coca Cola" /></div>
                         <div className="numbers">
-                            <TextField className='field' id="outlined-basic" label="PRECIO:" variant="outlined" />
-                            <TextField className='field' id="outlined-basic" label="STOCK MÍNIMO:" variant="outlined" />
+                        <TextField 
+                                className='field' 
+                                id="outlined-basic" 
+                                label="PRECIO:" 
+                                variant="outlined" 
+                                InputProps={{
+                                    startAdornment: (
+                                        <InputAdornment position="start">
+                                            <FontAwesomeIcon icon={faDollarSign} style={{ color: "#000000" }} />
+                                        </InputAdornment>
+                                    ),
+                                }}   
+                                defaultValue="100"      
+                            />
+                            <TextField className='field' id="outlined-basic" label="STOCK MÍNIMO:" variant="outlined" defaultValue="100" />
                         </div>
-                        <div className="category"><TextField className='field' id="outlined-basic" label="CATEGORÍA:" variant="outlined" /></div>
-                        <div className="description"><TextField className='field' id="outlined-basic" label="DESCRIPCIÓN:" variant="outlined" /></div>
+                        <div className="category"><TextField className='field' id="outlined-basic" label="CATEGORÍA:" variant="outlined" defaultValue="Chucherías" /></div>
+                        <div className="description"><TextField className='field' id="outlined-basic" label="DESCRIPCIÓN:" variant="outlined" defaultValue="Lorem Ipsum" /></div>
                         <div className="file">
                             <Button
                                 className='file-button'
