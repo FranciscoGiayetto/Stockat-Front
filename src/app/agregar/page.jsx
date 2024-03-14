@@ -13,12 +13,13 @@ import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import InputAdornment from '@mui/material/InputAdornment';
 
 // FONT AWESOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBackward } from '@fortawesome/free-solid-svg-icons';
+import { faBackward, faBarcode } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
-library.add(faBackward);
+library.add(faBackward, faBarcode);
 
 
 function page() {
@@ -54,12 +55,26 @@ function page() {
             <div className="cont">
                 <div className="cont-cont">
                     <div className="cabeza">
-                        <button className='volver'><FontAwesomeIcon icon="fa-solid fa-backward" size="xl" style={{color: "#F56F16",}} /></button>
+                        <a href="/productos"><button className='volver'><FontAwesomeIcon icon="fa-solid fa-backward" size="xl" style={{color: "#F56F16",}} /></button></a>
                         <h1>AGREGAR PRODUCTO</h1>
                         <button className='guardar'>GUARDAR</button>
                     </div>
                     <div className="cuerpo">
-                        <div className="code"><TextField className='field' id="outlined-basic" label="CÓDIGO:" variant="outlined" /></div>
+                        <div className="code">
+                            <TextField
+                                className='field'
+                                id="outlined-basic"
+                                InputProps={{
+                                    endAdornment: (
+                                        <InputAdornment position="end">
+                                            <a href="#"><FontAwesomeIcon icon='fa-solid fa-barcode' style={{ color: "#000000" }} size="xl" /></a>
+                                        </InputAdornment>
+                                    )
+                                }}                            
+                                label="CÓDIGO:"
+                                variant="outlined"
+                            />
+                        </div>
                         <div className="name"><TextField className='field' id="outlined-basic" label="NOMBRE:" variant="outlined" /></div>
                         <div className="numbers">
                             <TextField className='field' id="outlined-basic" label="PRECIO:" variant="outlined" />

@@ -17,9 +17,9 @@ import InputAdornment from '@mui/material/InputAdornment';
 
 // FONT AWESOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBackward, faDollarSign } from '@fortawesome/free-solid-svg-icons';
+import { faBackward, faDollarSign, faBarcode } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
-library.add(faBackward, faDollarSign);
+library.add(faBackward, faDollarSign, faBarcode);
 
 
 function page() {
@@ -55,12 +55,26 @@ function page() {
             <div className="cont">
                 <div className="cont-cont">
                     <div className="cabeza">
-                        <button className='volver'><FontAwesomeIcon icon="fa-solid fa-backward" size="xl" style={{color: "#F56F16",}} /></button>
+                        <a href="/productos"><button className='volver'><FontAwesomeIcon icon="fa-solid fa-backward" size="xl" style={{color: "#F56F16",}} /></button></a>
                         <h1>EDITAR PRODUCTO</h1>
                         <button className='guardar'>GUARDAR</button>
                     </div>
                     <div className="cuerpo">
-                        <div className="code"><TextField className='field' id="outlined-basic" label="CÓDIGO:" variant="outlined" defaultValue="123456789" /></div>
+                        <div className="code">
+                            <TextField
+                                className='field'
+                                id="outlined-basic"
+                                InputProps={{
+                                    endAdornment: (
+                                        <InputAdornment position="end">
+                                            <a href="#"><FontAwesomeIcon icon='fa-solid fa-barcode' style={{ color: "#000000" }} size="xl" /></a>
+                                        </InputAdornment>
+                                    )
+                                }}      
+                                label="CÓDIGO:"
+                                variant="outlined"
+                                defaultValue="123456789" />
+                            </div>
                         <div className="name"><TextField className='field' id="outlined-basic" label="NOMBRE:" variant="outlined" defaultValue="Caramelos de Coca Cola" /></div>
                         <div className="numbers">
                         <TextField 

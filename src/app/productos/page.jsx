@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, {useState} from 'react'
 
 // STYLES
 import './productos.css'
@@ -53,7 +53,6 @@ function page() {
     width: '100%',
     '& .MuiInputBase-input': {
       padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
       paddingLeft: `calc(1em + ${theme.spacing(4)})`,
       transition: theme.transitions.create('width'),
       [theme.breakpoints.up('sm')]: {
@@ -64,6 +63,18 @@ function page() {
       },
     },
   }));
+
+  // MODAL DE AGREGAR STOCK
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
 
   return (
     <>
@@ -85,7 +96,7 @@ function page() {
                 </Search>
               </div>
               <div className="botones-arriba">
-                <button className='nuevo'><FontAwesomeIcon icon="fa-solid fa-plus" style={{color: "#ffffff",}} size='2xl' /></button>
+                <a href="/agregar"><button className='nuevo'><FontAwesomeIcon icon="fa-solid fa-plus" style={{color: "#ffffff",}} size='2xl' /></button></a>
                 <button className='importar'><FontAwesomeIcon icon="fa-solid fa-file-import" style={{color: "#ffffff",}} size='2xl' /></button>
               </div>
             </div>
@@ -112,9 +123,28 @@ function page() {
                 <h3 className='precio'>$ 100</h3>
               </div>
               <div className="botones">
-                <button className='agregar'><FontAwesomeIcon icon="fa-solid fa-plus" style={{color: "#ffffff",}} size='2xl' /></button>
-                <button className='editar'><FontAwesomeIcon icon="fa-solid fa-pen-to-square" style={{color: "#ffffff",}} size='2xl' /></button>
+                <button className='agregar' onClick={openModal}><FontAwesomeIcon icon="fa-solid fa-plus" style={{color: "#ffffff",}} size='2xl' /></button>
+                <a href="/editar"><button className='editar'><FontAwesomeIcon icon="fa-solid fa-pen-to-square" style={{color: "#ffffff",}} size='2xl' /></button></a>
                 <button className='eliminar'><FontAwesomeIcon icon="fa-solid fa-trash" style={{color: "#ffffff",}} size='2xl' /></button>
+                {modalOpen && (
+                  <div className="modal-overlay">
+                    <div className="modal-content">
+                      <div className="modal-close">
+                        <button onClick={closeModal}>X</button>
+                      </div>
+                      <div className="modal-title">
+                        <h2>¡ME LLEGÓ STOCK DE CARAMELOS DE COCA COLA!</h2>
+                      </div>  
+                      <div className="modal-text">
+                        <h4>Cantidad ahora:</h4>
+                        <TextField className='modal-textfield' id="outlined-basic" label="Agregar:" variant="outlined" />
+                      </div>
+                      <div className="modal-add">
+                        <button className='modal-add' onClick={closeModal}>AGREGAR</button>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
