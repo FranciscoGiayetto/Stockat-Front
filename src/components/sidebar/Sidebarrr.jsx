@@ -19,15 +19,15 @@ function Sidebarrr() {
 
 
   // LOADER
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
 
 
@@ -35,7 +35,7 @@ function Sidebarrr() {
   return (
 
     <>
-    {loading && (
+    {/* {loading && (
     <div className={`fondo-loading ${loading ? 'visible' : 'hidden'}`}>
       <div class="loading-cat">
         <div class="cat-body"></div>
@@ -58,7 +58,7 @@ function Sidebarrr() {
       </div>
       <blockquote>Inspired from <a href="https://dribbble.com/domaso">domaso</a>'s dribbble: <a href="https://dribbble.com/shots/3197970-Loading-cat">Loading cat</a></blockquote>
     </div>
-    )}
+    )} */}
       
 
       <div className='all'>

@@ -75,6 +75,17 @@ function page() {
     setModalOpen(false);
   };
 
+    // MODAL DE AGREGAR CATEGORIA
+    const [modalOpen2, setModalOpen2] = useState(false);
+
+    const openModal2 = () => {
+      setModalOpen2(true);
+    };
+  
+    const closeModal2 = () => {
+      setModalOpen2(false);
+    };
+
 
   return (
     <>
@@ -105,7 +116,27 @@ function page() {
           <div className="opciones">
             <div className="opciones-contenido">
               <button className='filtrar'>FILTRAR v</button>
-              <button className='agregar-categoria'>AGREGAR CATEGORÍA</button>
+              <button onClick={openModal2} className='agregar-categoria'>AGREGAR CATEGORÍA</button>
+              {modalOpen2 && (
+                  <div className="modal-overlay">
+                    <div className="modal-content2">
+                      <div className="modal-close">
+                        <button onClick={closeModal2}>X</button>
+                      </div>
+                      <div className="modal-title modal-title2">
+                        <h2>AGREGAR CATEGORIA</h2>
+                      </div>  
+                      <div className="modal-text modal-text2">
+                        <TextField className='modal-textfield' id="outlined-basic" label="CATEGORÍA PADRE:" variant="outlined" />
+                        <TextField className='modal-textfield' id="outlined-basic" label="NOMBRE:" variant="outlined" />
+                        <TextField className='modal-textfield modal-textfield-desc' id="outlined-multiline-flexible" label="DESCRIPCIÓN:" multiline maxRows={4}/>
+                      </div>
+                      <div className="modal-add">
+                        <button className='modal-add' onClick={closeModal2}>AGREGAR</button>
+                      </div>
+                    </div>
+                  </div>
+                )}
             </div>
           </div>
 
